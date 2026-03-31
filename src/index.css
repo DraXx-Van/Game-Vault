@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #f59e0b;
+  --color-accent: #18181b;
+  --font-mono:'JetBrains Mono', monospace;
+}
+*{
+  font-family: var(--font-mono);
+}
+
