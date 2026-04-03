@@ -6,7 +6,7 @@ import SidbarButtons from '../UI/SidbarButtons'
 import UserProfle from '../UI/UserProfle'
 
 
-const Sidebar = () => {
+const Sidebar = ({onHubtoggle}) => {
   return (
     <div className='bg-[#0c0c0e] w-64 p-4 rounded-3xl flex flex-col overflow-hidden'>
       <Logo />
@@ -18,7 +18,7 @@ const Sidebar = () => {
           <SidbarButtons isActive={true} navitem={"Home"} logo={"ri-home-3-fill"}/>
           <SidbarButtons navitem={"Store"} logo={"ri-store-3-line"} isActive={false}/>
           <SidbarButtons navitem={"Library"} logo={"ri-book-shelf-line"} isActive={false}/>
-          <SidbarButtons navitem={"Activity Hub"} logo={"ri-team-fill"} isActive={false}/>
+          <SidbarButtons navitem={"Activity Hub"} logo={"ri-team-fill"} isActive={false} onClick={onHubtoggle}/>
         </nav>
       </div>
       <div className='pt-5'> 

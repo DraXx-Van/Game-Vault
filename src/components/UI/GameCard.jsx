@@ -1,17 +1,17 @@
 import React from 'react'
 
-const GameCard = () => {
+const GameCard = ({key,image,name,rating}) => {
   return (
     <div className='group flex flex-col gap-3 w-[260px] md:w-[280px] hover:translate-y-[-4px] hover:bg-[#1a1b22]/40 border border-white/5 transition-all duration-200 ease-in-out shrink-0 p-3 rounded-xl cursor-pointer bg-[#0c0c0e]'>
        <div className='h-[150px] rounded-xl relative overflow-hidden bg-[#18181b]'>
-        <img className='w-full h-full object-cover rounded-xl group-hover:scale-105 transition-all duration-500' src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2756930/header.jpg" alt="" />
+        <img className='w-full h-full object-cover rounded-xl group-hover:scale-105 transition-all duration-500' src={image} alt="" />
         <div className='absolute inset-0 bg-linear-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'></div>
        </div>
        
        <div className='pl-2 flex flex-col space-y-2'>
-        <h4 className='uppercase font-bold tracking-wide truncate text-[15px]'>Pump it up rise</h4>
+        <h4 className='uppercase font-bold tracking-wide truncate text-[15px]'>{name}</h4>
         <span className='text-[10px] uppercase tracking-widest font-black opacity-70 text-[#94a3b8] '>STEAM:
-            <span className='text-yellow-400'>89%</span>
+            <span className='text-yellow-400'>{rating}</span>
         </span>
         <div className='flex gap-2 justify-between'>
             <div className='flex items-center space-x-2'>

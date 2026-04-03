@@ -1,8 +1,13 @@
 import React from 'react'
 
-const SidbarButtons = ({isActive,logo,navitem}) => {
+const SidbarButtons = ({isActive,logo,navitem,onClick}) => {
   return (
-    <a href="" className={`
+    <a href="" 
+    onClick={(e)=>{
+      e.preventDefault();
+      onClick();
+    }}
+    className={`
     flex items-center space-x-3 px-3 py-2 rounded-lg transition-all hover:translate-x-1
     ${isActive ?'bg-[#18181b] text-[#fbfbfb] font-bold ' : 'hover:bg-[#18181b]/40 font-normal text-[#94a3b8]'}`}>
       <i className={logo}></i>
